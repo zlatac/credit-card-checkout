@@ -74,6 +74,7 @@ export default {
     },
     computed:{
         creditCardType(){
+            // returns String
             let cardNumber = this.cardNumber
             if(cardNumber !== ''){
                 let firstChar = cardNumber.charAt(0)
@@ -97,6 +98,7 @@ export default {
         submitForm(){
             this.isSubmitted = true
             //console.log(this.fields)
+            // Form validation plugin promise for validating all form elements attached to plugin
             this.$validator.validate()
             .then((res)=>{
                 if(res === true){

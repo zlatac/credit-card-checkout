@@ -18,6 +18,10 @@ Run `npm start` to launch app.
 ```
 
 ## Assumptions
+- Feature required is for only credit card payment
+- Credit card must be valid for submission
+- Limit as much user manual input for more consistent data flow
+- No Backend service required (backend submission or storage)
 
 ## Technologies Used
 - Node.js

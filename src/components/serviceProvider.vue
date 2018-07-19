@@ -16,6 +16,7 @@ export default {
     },
     computed:{
        monthList(){
+           //return Array
            let monthArray = []
            for(let i=0; i<12; i++){
                 let num = i + 1
@@ -27,6 +28,7 @@ export default {
            return monthArray
        },
        yearList(){
+           //return Array
            let yearArray = []
            let currentYear = new Date().getFullYear()
            for(let i=currentYear; i < currentYear + 12; i++){
@@ -37,6 +39,7 @@ export default {
 
     },
     mounted: function(){
+        //Setup for MaterializeCss plugins
         let modal = document.querySelector('.modal');
         let tooltip = document.querySelector('.tooltipped');
         let modalOptions = {}
@@ -84,10 +87,12 @@ export default {
             }
         },
         updateComponent(prop,newValue){
+            //Called when child component emits event to parent component to update parent state
             //console.log(arguments)
             this[prop] = newValue
         },
         triggerUpdate(event){
+            //Called by child component to emit event to parent component
             //console.log('something happend')
             this.$emit('updateForm',this.propName,event.target.value)
         }

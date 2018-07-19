@@ -29,6 +29,7 @@ export default {
         }
     },
     mounted: function(){
+        //Setup for MaterializeCss select plugin on the browser
         let elems = document.querySelectorAll('select');
         let options = {}
         this.selectInstances = M.FormSelect.init(elems, options);
